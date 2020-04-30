@@ -1,0 +1,28 @@
+.header-content{
+    z-index: 1;
+    text-align: center;
+    padding: 0 $gutter;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    max-width: 800px;
+    min-height: 180px;
+    margin: 0 auto;
+}
+
+.header-content__title{
+    @include text($Intro, 60px, 400, #ffffff, uppercase);
+    line-height: 1.5;
+}
+
+.header-content__btn{
+    @include text($Raleway, 20px, 800, #ffffff);
+    &:first-child{
+        margin-right: 30px;
+    }
+}
+
+// .header-content > .button--accent{
+//     margin-right: 30px;
+// }

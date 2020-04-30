@@ -1,0 +1,16 @@
+@mixin text ($ff, $fsz, $fw, $color, $ttr:none) {
+  font-family: $ff;
+  font-size: $fsz;
+  font-weight: $fw;
+  color: $color;
+  text-transform: $ttr;
+}
+
+%overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

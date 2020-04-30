@@ -1,0 +1,16 @@
+@import '../components/header-content';
+@import '../components/button';
+
+.main-header{
+    background-image: url('../../images/0-header.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    align-content: center;
+    &::before{
+        @extend %overlay;
+        background-color: $dark;
+        opacity: .92;
+    }
+}
