@@ -18,9 +18,8 @@
 
 .header-content__btn{
     @include text($Raleway, 20px, 800, #ffffff);
-    &:first-child{
-        margin-right: 30px;
-    }
+    &:nth-child(2){
+        margin-right: 30px;}
 }
 
 // .header-content > .button--accent{
