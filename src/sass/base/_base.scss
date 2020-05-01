@@ -37,6 +37,24 @@ ul{
   list-style: none;
 }
 
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button{
+  border: none;
+}
+
 .grid{
   display: grid;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
 }
