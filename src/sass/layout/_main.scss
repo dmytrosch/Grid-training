@@ -1,12 +1,10 @@
 @import '../components/portfolio';
+@import '../components/landing-section';
 @import '../components/ready-section';
 @import '../components/form-section';
+@import '../components/blog-section';
+@import '../components/blog-article';
 
 main{
     padding-top: 5px;
-}
-
-.landing-section{
-    padding-top: 80px;
-    padding-bottom: 80px;
 }

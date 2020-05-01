@@ -1,0 +1,42 @@
+.blog-article {
+  height: 100%;
+  background-color: $light;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 38px;
+  transition: $trans;
+  overflow: hidden;
+  padding-bottom: 25px;
+  &:hover{
+    background-color: darken($light, 5%);
+    & .blog-article__img{
+        transform: scale(1.05) translateY(-6.5px) ;
+    }
+  }
+}
+
+.blog-article__img{
+  overflow: hidden;
+  height: 270px;
+  width: 100%;
+  object-fit: cover;
+  transition: $trans;
+}
+
+.blog-article__content{
+    padding-left: $gutter;
+    padding-right: $gutter;
+    text-align: center;
+    align-content: center;
+}
+
+.blog-article__title{
+    @include text($Raleway, 18px, 800, #666666);
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 1.2;
+    margin-bottom: 34px;
+}
+
+.blog-article__text{
+    @include text($Raleway, 16px, 400, #333333);
+}

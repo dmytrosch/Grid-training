@@ -1,0 +1,16 @@
+.blog-section__list{
+    grid-gap: $gutter;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.blog-section__item:nth-child(3){
+    grid-column: 3 / 5;
+}
+
+.blog-section__item:nth-child(4){
+    grid-column: span 2;
+}
+
+.blog-section__title{
+    margin-bottom: 62px;
+}

@@ -1,0 +1,9 @@
+.landing-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__title {
+    @include text($Raleway, 34px, 800, $dark);
+    line-height: 1.2;
+  }
+}

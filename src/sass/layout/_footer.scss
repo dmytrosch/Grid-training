@@ -1,0 +1,9 @@
+@import '../components/footer-logo';
+
+.main-footer{
+    padding: 60px 0;
+    background-color: darken($dark, 8%);
+    &__container{
+        justify-items: center;
+    }
+}

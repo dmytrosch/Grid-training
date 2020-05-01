@@ -1,0 +1,26 @@
+.footer-logo {
+  font-family: $Raleway;
+  font-weight: 400;
+  max-width: 130px;
+  text-align: center;
+  line-height: 1.16;
+
+  &__text-smaller {
+    color: #4E5355;
+    font-size: 22px;
+  }
+
+  &__text-bigger {
+    color: #707476;
+    font-size: 27px;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  &__copyright {
+    display: inline-block;
+    color: #494D50;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

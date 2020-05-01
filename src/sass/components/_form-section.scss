@@ -4,13 +4,13 @@
   background-color: $dark;
 
   &__form-container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr) 200px;
     grid-gap: $gutter;
   }
 
   &__button {
     @include text($Raleway, 17px, 800, #ffffff);
-    justify-self: start;
+    // justify-self: start;
   }
 }
 
@@ -23,9 +23,11 @@
   transition: $trans;
   outline: none;
   height: 50px;
+  &:focus{
+    background-color: #ffffff;
+  }
 
   &:required:focus:invalid {
-    background-color: #ffffff;
     color: $btn-dark;
     border: 2px solid red;
   }
@@ -49,27 +51,5 @@
     border: 2px solid green;
 
   }
-
-  //   &:required {
-  //     color: $btn-dark;
-  //     background-color: #fff;
-  //     &:valid {
-  //       background-color: #fff;
-  //       border: 2px solid green;
-  //     }
-
-  //     &:invalid{
-
-  //     }
-
-  //     &:focus:invalid {
-  //       border: 2px solid red;
-  //     }
-  //   }
-  //   &:focus {
-  //     outline: none;
-  //     background-color: #ffffff;
-  //     color: $btn-dark;
-  //   }
 
 }
