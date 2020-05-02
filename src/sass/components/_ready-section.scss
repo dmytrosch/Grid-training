@@ -4,17 +4,23 @@
   &__container {
     grid-template-columns: 1fr 1fr;
     grid-gap: 26px;
+
+    @media #{$mx768} {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__article {
     border-right: 1px solid rgba($color: #000000, $alpha: .08);
     padding: 60px 60px 0 60px;
-
+    @media #{$mx992}{
+      padding: $gutter;
+    }
+    @media #{$mx768}{
+      border: none;
+    }
   }
 
-  &__title {
-    margin-bottom: 50px;
-  }
 
   &__text {
     @include text($Raleway, 18px, 400, #333333);
@@ -25,4 +31,8 @@
     }
   }
 
+}
+.ready-section__img{
+  align-self: center;
+  justify-self: center;
 }

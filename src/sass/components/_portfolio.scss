@@ -1,4 +1,4 @@
-.portfolio{
+.portfolio {
   padding-bottom: 10px;
 }
 
@@ -6,46 +6,68 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 32vh);
   grid-gap: 10px;
+
+  @media #{$mx992} {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 40vh);
+  }
+  @media #{$mx480}{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 50vh);
+    grid-gap: 5px;
+  }
 }
 
-.portfolio__item{
-    position: relative;
-    background-size: cover;
-    background-position: center;    
+.portfolio__item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  transition: $trans;
+
+  &::before {
+    @extend %overlay;
+    background-color: $dark;
     transition: $trans;
-    &::before {
-        @extend %overlay;
-        background-color: $dark;
-        transition: $trans;
-        opacity: .65;
-    }
-    &:hover::before,
-    &:focus::before{
-        opacity: .8;
-    }
+    opacity: .65;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: .8;
+  }
 
 }
+
 .portfolio__link {
   @include text($Raleway, 22px, 700, #ffffff);
   transition: $trans;
   height: 100%;
-  text-align: center; 
+  text-align: center;
   padding: 10px;
   position: relative;
-  align-items: center; 
+  align-items: center;
+
   &:hover,
-  &:focus{
-      color: $accent;
+  &:focus {
+    color: $accent;
   }
+
   // &:focus .portfolio__item::before{
   //     opacity: .8;
   // }
+  @media #{$mx992} {
+    font-size: 16px;
+  }
 }
 
 .portfolio__item--1 {
   background-image: url('../images/1.jpg');
   grid-column: span 2;
   grid-row: span 1;
+  @media #{$mx480}{
+    grid-column: span 1;
+    
+  }
 }
 
 .portfolio__item--2 {
@@ -54,22 +76,56 @@
 
 .portfolio__item--3 {
   background-image: url('../images/3.jpg');
+  @media #{$mx992}{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  @media #{$mx480}{
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 }
 
 .portfolio__item--4 {
   background-image: url('../images/4.jpg');
+
+  @media #{$mx992} {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+  @media #{$mx480}{
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 }
 
 .portfolio__item--5 {
   background-image: url('../images/5.jpg');
   grid-row: 2 / 3;
   grid-column: 2 / 4;
+
+  @media #{$mx992} {
+    grid-row: 3 / 4;
+    grid-column: span 2;
+  }
+  @media #{$mx480}{
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 }
 
 .portfolio__item--6 {
   background-image: url('../images/6.jpg');
   grid-row: 2 / 4;
   grid-column: 4 / 5;
+  @media #{$mx992}{
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+  }
+  @media #{$mx480}{
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 }
 
 .portfolio__item--7 {

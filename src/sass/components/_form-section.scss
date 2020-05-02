@@ -6,11 +6,23 @@
   &__form-container {
     grid-template-columns: repeat(3, 1fr) 200px;
     grid-gap: $gutter;
+
+    @media #{$mx992} {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media #{$mx560} {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__button {
     @include text($Raleway, 17px, 800, #ffffff);
-    // justify-self: start;
+
+    @media #{$mx992} {
+      font-size: 18px;
+    }
+
   }
 }
 
@@ -23,7 +35,8 @@
   transition: $trans;
   outline: none;
   height: 50px;
-  &:focus{
+
+  &:focus {
     background-color: #ffffff;
   }
 
@@ -38,13 +51,14 @@
     border: 2px solid green;
   }
 
-  &--email:not(:placeholder-shown):invalid{
+  &--email:not(:placeholder-shown):invalid {
     background-color: #fff;
     color: $btn-dark;
     outline: none;
     border: 2px solid red;
   }
-  &--email:not(:placeholder-shown):valid{
+
+  &--email:not(:placeholder-shown):valid {
     background-color: #fff;
     color: $btn-dark;
     outline: none;

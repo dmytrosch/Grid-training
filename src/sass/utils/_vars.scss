@@ -17,5 +17,9 @@ $Intro: 'Intro', sans-serif;
 $trans: all 0.3s ease-in-out;
 
 // media breaks
+$mx992: screen and (max-width: 992px);
+$mx768: screen and (max-width: 768px);
+$mx560: screen and (max-width: 560px);
+$mx480: screen and (max-width: 480px);
 
 
