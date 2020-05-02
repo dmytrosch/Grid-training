@@ -16,6 +16,11 @@
   }
 }
 
+.blog-section__item{
+background-color: $light;
+}
+
+
 .blog-section__item:nth-child(3) {
   grid-column: span 2;
 

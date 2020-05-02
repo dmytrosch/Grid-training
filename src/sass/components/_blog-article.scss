@@ -1,9 +1,8 @@
 .blog-article {
   height: 100%;
-  background-color: $light;
   grid-template-rows: 1fr 1fr;
   grid-gap: 38px;
-  // align-items: center;
+  align-items: center;
   transition: $trans;
   overflow: hidden;
   padding-bottom: 25px;
@@ -34,10 +33,15 @@
 
 .blog-article__title{
     @include text($Raleway, 18px, 800, #666666);
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     line-height: 1.2;
     margin-bottom: 34px;
+    @media screen and (max-width: 1080px){
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    
 }
 
 .blog-article__text{
